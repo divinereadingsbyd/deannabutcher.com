@@ -3,86 +3,91 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Divine Readings by D | Deanna Whitelock Butcher</title>
-  <meta name="description" content="Private intuitive sessions with Deanna + a deeper pathway through Awaken → Illuminate → Embody. Psychic Tarot, Mediumship, Akashic Records, and Intuitive Healing." />
-  <meta name="theme-color" content="#fbf3f6" />
+  <title>Divine Readings by D | Deanna Whitelock (Butcher)</title>
+  <meta name="description" content="Private intuitive sessions with Deanna Whitelock (Butcher) — Psychic Tarot, Mediumship, Akashic Records, and Intuitive Healing — plus a deeper pathway through Awaken → Illuminate → Embody." />
+  <meta name="theme-color" content="#fdf6f8" />
 
-  <!-- Elegant font pairing (optional but makes it feel 'Wix') -->
+  <!-- Elegant font pairing (gives “Wix” polish) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      --bg:#fbf3f6;           /* blush */
-      --bg2:#fff9fb;          /* lighter blush */
-      --ink:#241c20;          /* warm charcoal */
-      --muted:rgba(36,28,32,.72);
-      --gold:#c8a24a;
+      --bg:#fdf6f8;            /* blush */
+      --bg2:#fffafb;           /* lighter blush */
+      --cream:#fffdf8;         /* warm cream */
+      --ink:#231b1f;           /* warm charcoal */
+      --muted:rgba(35,27,31,.72);
+
+      --gold:#c7a24a;          /* subtle gold */
+      --goldSoft:rgba(199,162,74,.22);
       --pink:#e9b7c6;
-      --line:rgba(200,162,74,.22);
-      --softline:rgba(36,28,32,.10);
-      --white:#ffffff;
-      --shadow: 0 18px 60px rgba(36,28,32,.08);
-      --radius: 24px;
-      --max: 1120px;
+      --pinkSoft:rgba(233,183,198,.26);
+
+      --line:rgba(35,27,31,.10);
+      --lineGold:rgba(199,162,74,.25);
+
+      --shadow: 0 18px 60px rgba(35,27,31,.08);
+      --radius: 26px;
+
+      --max: 1140px;
     }
 
     *{ box-sizing:border-box; }
-    html,body{
-      margin:0; padding:0;
-      background: radial-gradient(1200px 700px at 15% 10%, rgba(233,183,198,.35), transparent 55%),
-                  radial-gradient(900px 500px at 80% 0%, rgba(200,162,74,.18), transparent 55%),
-                  var(--bg);
-      color:var(--ink);
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-      line-height:1.6;
+    html,body{ margin:0; padding:0; color:var(--ink); font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; line-height:1.6; }
+
+    body{
+      background:
+        radial-gradient(1000px 600px at 15% 10%, var(--pinkSoft), transparent 60%),
+        radial-gradient(900px 540px at 85% 0%, rgba(199,162,74,.16), transparent 55%),
+        radial-gradient(800px 520px at 80% 95%, rgba(233,183,198,.18), transparent 60%),
+        linear-gradient(180deg, var(--bg), var(--bg2));
     }
-    a{ color: inherit; text-decoration:none; }
+
+    a{ color:inherit; text-decoration:none; }
     a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible{
-      outline: 3px solid rgba(200,162,74,.35);
+      outline: 3px solid rgba(199,162,74,.35);
       outline-offset: 3px;
       border-radius: 14px;
     }
 
     .wrap{ max-width:var(--max); margin:0 auto; padding: 22px 18px 70px; }
 
-    /* Top nav (Wix-like) */
+    /* Top bar */
     header{
       display:flex; align-items:center; justify-content:space-between;
-      gap:14px;
-      padding: 10px 2px 18px;
+      gap:14px; padding: 10px 2px 18px;
     }
-    .brand{ display:flex; align-items:center; gap:12px; min-width:0; }
-    .brand img{ width:44px; height:44px; object-fit:contain; }
+    .brand{
+      display:flex; align-items:center; gap:12px; min-width:0;
+    }
+    .brand img{ width:46px; height:46px; object-fit:contain; }
     .brand .stack{ display:flex; flex-direction:column; }
     .brand strong{ font-size:14px; letter-spacing:.2px; }
-    .brand span{ font-size:12.5px; color:var(--muted); }
+    .brand span{ font-size:12.6px; color:var(--muted); }
 
     nav{ display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
     .navlink{
-      font-size: 13px;
-      padding: 10px 14px;
-      border-radius: 999px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.65);
+      font-size: 13px; padding: 10px 14px; border-radius: 999px;
+      border: 1px solid var(--lineGold);
+      background: rgba(255,255,255,.75);
       transition: transform .12s ease, box-shadow .12s ease;
     }
-    .navlink:hover{ transform: translateY(-1px); box-shadow: 0 14px 40px rgba(36,28,32,.08); }
+    .navlink:hover{ transform: translateY(-1px); box-shadow: 0 14px 40px rgba(35,27,31,.08); }
 
-    /* Sections: Wix-style bands */
-    .section{
+    /* Wix-like section bands */
+    .band{
       margin-top: 18px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.72);
-      box-shadow: var(--shadow);
       border-radius: var(--radius);
       overflow:hidden;
+      border: 1px solid var(--lineGold);
+      background: rgba(255,255,255,.72);
+      box-shadow: var(--shadow);
     }
-    .inner{ padding: 34px 30px; }
-    @media (max-width: 900px){
-      .inner{ padding: 26px 18px; }
-    }
+
+    .inner{ padding: 36px 30px; }
+    @media (max-width: 920px){ .inner{ padding: 28px 18px; } }
 
     .heroGrid{
       display:grid;
@@ -90,19 +95,17 @@
       gap: 28px;
       align-items:center;
     }
-    @media (max-width: 950px){
-      .heroGrid{ grid-template-columns: 1fr; }
-    }
+    @media (max-width: 980px){ .heroGrid{ grid-template-columns: 1fr; } }
 
     .kicker{
       display:inline-flex; align-items:center; gap:10px;
       font-size:12px; letter-spacing:.38px; text-transform:uppercase;
-      color: rgba(36,28,32,.66);
+      color: rgba(35,27,31,.64);
     }
     .kicker i{
       width:10px; height:10px; border-radius:999px;
       background: radial-gradient(circle at 30% 30%, #fff, var(--gold));
-      box-shadow: 0 0 0 8px rgba(200,162,74,.14);
+      box-shadow: 0 0 0 8px rgba(199,162,74,.14);
       display:inline-block;
     }
 
@@ -110,116 +113,117 @@
       font-family: Fraunces, serif;
       font-weight: 600;
       margin: 12px 0 12px;
-      font-size: clamp(30px, 3.7vw, 50px);
+      font-size: clamp(30px, 3.7vw, 52px);
       line-height: 1.08;
       letter-spacing: .2px;
     }
+
     h2{
       font-family: Fraunces, serif;
       font-weight: 600;
       margin: 0 0 10px;
-      letter-spacing: .15px;
+      letter-spacing: .12px;
       font-size: 22px;
     }
+
     .lead{
       margin: 0 0 16px;
       color: var(--muted);
       font-size: 16px;
-      max-width: 62ch;
+      max-width: 64ch;
     }
 
     .quote{
-      border: 1px solid rgba(200,162,74,.25);
-      background: linear-gradient(180deg, rgba(255,255,255,.70), rgba(251,243,246,.55));
+      border: 1px solid rgba(199,162,74,.25);
+      background: linear-gradient(180deg, rgba(255,255,255,.78), rgba(253,246,248,.60));
       padding: 16px 16px;
       border-radius: 18px;
-      color: rgba(36,28,32,.82);
-      font-size: 14.8px;
+      color: rgba(35,27,31,.82);
+      font-size: 14.9px;
     }
-    .quote strong{ color: rgba(36,28,32,.92); }
+    .quote strong{ color: rgba(35,27,31,.95); }
 
     .ctaRow{ display:flex; gap:10px; flex-wrap:wrap; margin-top: 18px; }
+
     .btn{
       display:inline-flex; align-items:center; justify-content:center;
       padding: 12px 16px;
       border-radius: 14px;
-      border: 1px solid rgba(36,28,32,.14);
+      border: 1px solid rgba(35,27,31,.14);
       font-weight: 650;
       font-size: 14px;
       transition: transform .12s ease, box-shadow .12s ease;
       cursor:pointer;
+      user-select:none;
     }
-    .btn:hover{ transform: translateY(-1px); box-shadow: 0 16px 50px rgba(36,28,32,.10); }
-    .btn.primary{ background: var(--ink); color: #fff; }
+    .btn:hover{ transform: translateY(-1px); box-shadow: 0 16px 50px rgba(35,27,31,.10); }
+
+    .btn.primary{ background: var(--ink); color:#fff; }
     .btn.secondary{
-      background: linear-gradient(180deg, rgba(233,183,198,.75), rgba(255,255,255,.65));
-      border-color: rgba(233,183,198,.70);
+      background: linear-gradient(180deg, rgba(233,183,198,.70), rgba(255,255,255,.70));
+      border-color: rgba(233,183,198,.75);
     }
     .btn.ghost{
-      background: rgba(255,255,255,.80);
-      border-color: var(--line);
+      background: rgba(255,255,255,.86);
+      border-color: rgba(199,162,74,.25);
     }
 
-    .note{ margin-top: 12px; color: rgba(36,28,32,.62); font-size: 12.8px; }
+    .note{ margin-top: 12px; color: rgba(35,27,31,.62); font-size: 12.9px; }
 
     .portrait{
-      border-radius: 20px;
-      border: 1px solid var(--softline);
+      border-radius: 22px;
       overflow:hidden;
-      background: #fff;
-      box-shadow: 0 18px 55px rgba(36,28,32,.10);
+      border: 1px solid var(--line);
+      background:#fff;
+      box-shadow: 0 18px 55px rgba(35,27,31,.10);
     }
-    .portrait img{ width:100%; height: 420px; object-fit: cover; display:block; }
-    @media (max-width: 950px){
-      .portrait img{ height: 360px; }
-    }
+    .portrait img{ width:100%; height: 430px; object-fit: cover; display:block; }
+    @media (max-width: 980px){ .portrait img{ height: 360px; } }
 
     .miniRow{
-      margin-top: 14px;
+      margin-top: 16px;
       display:grid;
       grid-template-columns: 1fr 1fr;
       gap: 12px;
     }
-    @media (max-width: 900px){
-      .miniRow{ grid-template-columns: 1fr; }
-    }
+    @media (max-width: 920px){ .miniRow{ grid-template-columns: 1fr; } }
+
     .mini{
       padding: 16px;
       border-radius: 18px;
-      border: 1px solid var(--softline);
-      background: rgba(255,255,255,.75);
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.80);
     }
-    .mini strong{ display:block; margin-bottom:6px; }
+    .mini strong{ display:block; margin-bottom: 6px; }
     .mini p{ margin:0; color: var(--muted); font-size: 14px; }
 
     .divider{
       height:1px;
-      background: linear-gradient(90deg, transparent, rgba(200,162,74,.55), transparent);
+      background: linear-gradient(90deg, transparent, rgba(199,162,74,.55), transparent);
       margin: 22px 0;
     }
 
-    /* Services list (keep clean + scan-friendly) */
+    /* Services */
     .svcGrid{
       display:grid;
       grid-template-columns: 1fr 1fr;
       gap: 12px;
       margin-top: 10px;
     }
-    @media (max-width: 900px){
-      .svcGrid{ grid-template-columns: 1fr; }
-    }
+    @media (max-width: 920px){ .svcGrid{ grid-template-columns: 1fr; } }
+
     .svc{
       display:flex; justify-content:space-between; gap:12px; align-items:flex-start;
       padding: 16px 16px;
       border-radius: 18px;
-      border: 1px solid var(--softline);
-      background: rgba(255,255,255,.78);
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.85);
     }
     .svc .title{ font-weight: 700; }
-    .svc .desc{ margin-top:2px; font-size: 13.6px; color: var(--muted); }
+    .svc .desc{ margin-top:2px; font-size: 13.7px; color: var(--muted); }
     .svc .price{ font-weight: 800; white-space:nowrap; }
 
-    /* AIE “explain it” layout */
+    /* AIE */
     .aieGrid{
       display:grid;
       grid-template-columns: 1.1fr .9fr;
@@ -227,45 +231,41 @@
       align-items:start;
       margin-top: 10px;
     }
-    @media (max-width: 950px){
-      .aieGrid{ grid-template-columns: 1fr; }
-    }
+    @media (max-width: 980px){ .aieGrid{ grid-template-columns: 1fr; } }
+
     .bullets{
-      margin: 12px 0 0;
+      margin: 10px 0 0;
       padding: 0 0 0 18px;
-      color: rgba(36,28,32,.78);
+      color: rgba(35,27,31,.78);
     }
     .bullets li{ margin: 8px 0; }
 
-    .steps{
-      display:grid;
-      gap: 12px;
-    }
+    .steps{ display:grid; gap: 12px; }
     .step{
       border-radius: 18px;
-      border: 1px solid rgba(200,162,74,.22);
-      background: linear-gradient(180deg, rgba(255,255,255,.78), rgba(251,243,246,.60));
+      border: 1px solid rgba(199,162,74,.22);
+      background: linear-gradient(180deg, rgba(255,255,255,.82), rgba(253,246,248,.65));
       padding: 16px;
     }
-    .step strong{ display:block; margin-bottom:6px; }
+    .step strong{ display:block; margin-bottom: 6px; }
+    .step .small{ margin:0; color: var(--muted); font-size: 13.8px; }
 
-    /* Contact form */
+    /* Contact */
     .contactGrid{
       display:grid;
       grid-template-columns: 1.05fr .95fr;
       gap: 16px;
       align-items:start;
     }
-    @media (max-width: 950px){
-      .contactGrid{ grid-template-columns: 1fr; }
-    }
-    label{ display:block; font-size: 12.5px; color: rgba(36,28,32,.70); margin: 0 0 6px; }
+    @media (max-width: 980px){ .contactGrid{ grid-template-columns: 1fr; } }
+
+    label{ display:block; font-size: 12.6px; color: rgba(35,27,31,.70); margin: 0 0 6px; }
     input, textarea{
       width:100%;
       padding: 12px 12px;
       border-radius: 14px;
-      border: 1px solid rgba(36,28,32,.16);
-      background: rgba(255,255,255,.82);
+      border: 1px solid rgba(35,27,31,.16);
+      background: rgba(255,255,255,.88);
       color: var(--ink);
       font-size: 14px;
     }
@@ -274,8 +274,8 @@
     footer{
       margin-top: 24px;
       padding-top: 18px;
-      border-top: 1px solid var(--line);
-      color: rgba(36,28,32,.60);
+      border-top: 1px solid rgba(199,162,74,.25);
+      color: rgba(35,27,31,.60);
       font-size: 12.5px;
       display:flex;
       flex-wrap:wrap;
@@ -292,28 +292,29 @@
         <img src="assets/logo.png" alt="Divine Readings by D logo" />
         <div class="stack">
           <strong>Divine Readings by D</strong>
-          <span>Intuitive Guidance • Growth • Clarity</span>
+          <span>Deanna Whitelock (Butcher) • intuitive guidance • clarity</span>
         </div>
       </div>
 
       <nav aria-label="Primary">
         <a class="navlink" href="#sessions">Sessions</a>
         <a class="navlink" href="#aie">Awaken Illuminate & Embody</a>
-        <a class="navlink" href="#contact">Contact</a>
+        <a class="navlink" href="#contact">Book / Ask</a>
       </nav>
     </header>
 
     <!-- HERO -->
-    <section class="section">
+    <section class="band">
       <div class="inner">
         <div class="heroGrid">
           <div>
-            <div class="kicker"><i aria-hidden="true"></i> gentle truth • clear next steps • no pressure</div>
+            <div class="kicker"><i aria-hidden="true"></i> Grounded, Honest, and Centered on Your Autonomy</div>
+
             <h1>You’re safe here. I’m still offering sessions — and I’m also growing.</h1>
 
             <p class="lead">
-              I’m still here for the readings and healing you’ve always known — grounded, honest, and centered on your autonomy.
-              And if you’ve been sensing a deeper shift inside you… I created a pathway to support that growth:
+              I’m still here for the readings and healing you’ve always known — calm, direct, and truth-centered.
+              And if you’ve been sensing a deeper shift inside you… I created a guided pathway for real-life change:
               <strong>Awaken → Illuminate → Embody</strong>.
             </p>
 
@@ -324,40 +325,40 @@
             </div>
 
             <div class="ctaRow">
-              <a class="btn primary" href="#contact">Contact Deanna to book</a>
+              <a class="btn primary" href="#contact">Book a session / ask a question</a>
               <a class="btn secondary" href="https://www.awakenilluminateembody.com" target="_blank" rel="noopener">Explore Awaken • Illuminate • Embody</a>
               <a class="btn ghost" href="https://www.facebook.com/DivineReadingsByD/" target="_blank" rel="noopener">Follow the main Facebook page</a>
             </div>
 
             <div class="note">
-              Booking is simple: message me the session you want + 2–3 time options. I confirm, then send PayPal invoicing.
+              Booking is simple: Send me a message request and I will book you in manually. An invoice will be sent at when you book with me. Payment is due prior to your session to hold your date and time.
             </div>
 
             <div class="miniRow">
               <div class="mini">
                 <strong>What I help with</strong>
-                <p>Clarity • emotional heaviness • life transitions • spiritual growth — always grounded, always respectful.</p>
+                <p>Clarity • emotional heaviness • life transitions • spiritual growth — grounded and respectful.</p>
               </div>
               <div class="mini">
                 <strong>How to choose</strong>
-                <p>One session for clarity. AIE if you’re ready for true change that lasts — not just insight.</p>
+                <p>One session for clarity. Come to Awaken, Illuminate & Embody if you’re ready for true change that lasts — not just insight.</p>
               </div>
             </div>
           </div>
 
           <div class="portrait">
-            <img src="assets/deanna.jpg" alt="Deanna portrait" />
+            <img src="assets/deanna.jpg" alt="Portrait of Deanna Whitelock (Butcher)" />
           </div>
         </div>
       </div>
     </section>
 
     <!-- SESSIONS -->
-    <section id="sessions" class="section">
+    <section id="sessions" class="band">
       <div class="inner">
         <h2>Sessions & Pricing</h2>
         <p class="lead" style="margin-bottom:6px;">
-          Not sure what fits? Tell me what you’re navigating and I’ll recommend the best session type.
+          Not sure what fits? Tell me what you’re navigating, and I’ll recommend the best session type.
         </p>
 
         <div class="svcGrid">
@@ -403,56 +404,57 @@
     </section>
 
     <!-- AIE -->
-    <section id="aie" class="section">
+    <section id="aie" class="band">
       <div class="inner">
-        <h2>Awaken → Illuminate → Embody</h2>
+        <h2>Awaken → Illuminate → Embody (AIE)</h2>
         <p class="lead" style="margin-bottom:0;">
-          AIE exists because insight alone isn’t always enough. Many women can “see the truth” and still feel stuck.
-          AIE is for the woman who is ready to move from awareness… into real change.
+          I created this program because insight alone isn’t always enough. Many women can “see the truth” and still feel stuck.
+          Awaken, Illuminate & Embody is a gentle structure that helps you move from awareness… into real change.
         </p>
 
         <div class="aieGrid">
           <div>
             <div class="divider" aria-hidden="true"></div>
 
-            <h2 style="font-size:18px; margin-bottom:8px;">Why I created Awaken Illuminate & Emobdy</h2>
+            <h2 style="font-size:18px; margin-bottom:8px;">Why I created Awaken, Illuminate & Embody</h2>
             <p class="lead" style="font-size:15px;">
-              Over time, I noticed a pattern: women weren’t lacking intelligence or strength — they were carrying too much.
-              Old conditioning. Emotional heaviness. Overwhelm. Self-abandonment. Survival mode.
-              AIE is a gentle structure to help you come back to yourself — without giving your power away to anyone.
+              Over time, I noticed something powerful: women weren’t lacking strength — they were carrying too much.
+              Emotional heaviness. Overwhelm. Old patterns. People-pleasing. Survival mode.
+              AIE is a guided path to help you return to yourself, rebuild self-trust, and choose your next chapter with clarity —
+              without giving your power away.
             </p>
 
-            <h2 style="font-size:18px; margin:18px 0 8px;">How it helps</h2>
+            <h2 style="font-size:18px; margin:18px 0 8px;">How AIE can help you</h2>
             <ul class="bullets">
               <li>Turns intuitive insight into grounded action.</li>
               <li>Helps you trust yourself again — and hold your boundaries without guilt.</li>
-              <li>Supports emotional regulation when life feels heavy or confusing.</li>
+              <li>Supports emotional regulation when life feels heavy, confusing, or stuck.</li>
               <li>Guides you through transitions: relationships, identity shifts, purpose, and “what now?” seasons.</li>
-              <li>Keeps your autonomy intact — you’re guided, not controlled.</li>
+              <li>Honors your autonomy — you’re guided, not controlled.</li>
             </ul>
 
             <div class="ctaRow" style="margin-top:16px;">
               <a class="btn secondary" href="https://www.awakenilluminateembody.com" target="_blank" rel="noopener">Visit AIE website</a>
-              <a class="btn ghost" href="#contact">Book a session first</a>
+              <a class="btn ghost" href="#contact">Ask if AIE is right for you</a>
             </div>
           </div>
 
           <div class="steps">
             <div class="step">
               <strong>Awaken</strong>
-              <div class="note" style="margin:0;">Recognize what’s real. See the pattern. Stop gaslighting yourself.</div>
+              <p class="small">Recognize what’s real. See the pattern. Stop gaslighting yourself.</p>
             </div>
             <div class="step">
               <strong>Illuminate</strong>
-              <div class="note" style="margin:0;">Bring truth into the light with reflection + gentle guidance.</div>
+              <p class="small">Bring truth into the light through reflection, grounded guidance, and clarity.</p>
             </div>
             <div class="step">
               <strong>Embody</strong>
-              <div class="note" style="margin:0;">Live it. Hold the boundary. Become the version of you who doesn’t go back.</div>
+              <p class="small">Live it. Hold the boundary. Become the version of you who doesn’t go back.</p>
             </div>
             <div class="step">
-              <strong>Still doing readings</strong>
-              <div class="note" style="margin:0;">Sessions remain available — AIE is simply the deeper path for women ready for real change.</div>
+              <strong>Sessions are still here</strong>
+              <p class="small">Readings remain available — Awaken, Illuminate & Embody is simply the deeper path for women ready for transformation.</p>
             </div>
           </div>
         </div>
@@ -467,11 +469,12 @@
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="section">
+    <section id="contact" class="band">
       <div class="inner">
-        <h2>Contact Deanna to book</h2>
+        <h2>Book a session or ask a question</h2>
         <p class="lead" style="margin-bottom:0;">
-          Send the session you want + 2–3 time options. I’ll reply with confirmation and a PayPal invoice.
+          This form opens your email with a pre-filled message to <strong>divinereadingsbyd@gmail.com</strong>.
+          Send the session you want and Deanna will respond with her available dates and times. An invoice will be sent to you and payment will be due prior to your reading to hold your booking.
         </p>
 
         <div class="divider" aria-hidden="true"></div>
@@ -484,8 +487,8 @@
 
               <div style="height:10px;"></div>
 
-              <label for="session">Session you want</label>
-              <input id="session" name="session" placeholder="e.g., Psychic Tarot (60 min), Mediumship, Akashic Records..." />
+              <label for="session">Session you want (or “question”)</label>
+              <input id="session" name="session" placeholder="e.g., Psychic Tarot (60 min), Mediumship, Akashic Records, Question..." />
 
               <div style="height:10px;"></div>
 
@@ -494,16 +497,16 @@
 
               <div style="height:10px;"></div>
 
-              <label for="message">Anything you want me to know</label>
-              <textarea id="message" name="message" placeholder="Share what you're navigating or what you want clarity on..."></textarea>
+              <label for="message">Your message</label>
+              <textarea id="message" name="message" placeholder="Share what you're navigating, what you want clarity on, or your question..."></textarea>
 
               <div class="ctaRow">
-                <button class="btn primary" type="submit">Send booking request</button>
-                <a class="btn ghost" href="https://www.facebook.com/DivineReadingsByD/" target="_blank" rel="noopener">Message on Facebook</a>
+                <button class="btn primary" type="submit">Email Deanna</button>
+                <a class="btn ghost" href="mailto:divinereadingsbyd@gmail.com?subject=Question%20%E2%80%94%20Divine%20Readings%20by%20D">Email directly</a>
               </div>
 
               <div class="note">
-                This opens your email app with a pre-filled message (nothing is submitted to a system).
+                Nothing is submitted to a system — you stay in control of your message.
               </div>
             </form>
           </div>
@@ -511,7 +514,7 @@
           <div class="mini">
             <strong>Quick links</strong>
             <p style="margin:0; color:var(--muted);">
-              If you’re ready for deeper transformation, AIE is the next step. If you want clarity first, book a session.
+              Want the deeper path? Explore Awaken, Illuminate & Embody. Want clarity first? Book a session. Either way — you’re welcome here.
             </p>
 
             <div class="ctaRow" style="margin-top:14px;">
@@ -522,15 +525,13 @@
             <div class="divider" aria-hidden="true"></div>
 
             <div class="note" style="margin:0;">
-              Tip: use <strong>deannabutcher.com</strong> as your “link hub” everywhere.
+              Tip: Use <strong>deannabutcher.com</strong> as your single link everywhere you would use Linktree.
             </div>
           </div>
         </div>
 
-        <div class="divider" aria-hidden="true"></div>
-
         <footer>
-          <div>© <span id="year"></span> Divine Readings by D • deannabutcher.com</div>
+          <div>© <span id="year"></span> Divine Readings by D • Deanna Whitelock (Butcher)</div>
           <div>
             <a href="#sessions">Sessions</a> ·
             <a href="https://www.awakenilluminateembody.com" target="_blank" rel="noopener">AIE</a> ·
@@ -539,13 +540,11 @@
         </footer>
       </div>
     </section>
-
   </div>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Replace with your booking email:
     const TO_EMAIL = "divinereadingsbyd@gmail.com";
 
     document.getElementById("contactForm").addEventListener("submit", (e) => {
@@ -556,11 +555,11 @@
       const times = document.getElementById("times").value.trim();
       const message = document.getElementById("message").value.trim();
 
-      const subject = encodeURIComponent("Booking Request — Divine Readings by D");
+      const subject = encodeURIComponent("Booking / Question — Divine Readings by D");
       const body = encodeURIComponent(
         `Name: ${name || "-"}\n` +
-        `Session: ${session || "-"}\n` +
-        `Best times: ${times || "-"}\n\n` +
+        `Session or Question: ${session || "-"}\n` +
+        `Best times (if booking): ${times || "-"}\n\n` +
         `Message:\n${message || "-"}\n\n` +
         `Sent from deannabutcher.com`
       );
