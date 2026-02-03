@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Divine Readings by D | Deanna</title>
+  <meta name="description" content="Psychic Tarot, Mediumship, Akashic Records, and Intuitive Healing. Book a session with Deanna, or explore Awaken → Illuminate → Embody." />
+  <meta name="theme-color" content="#0b0b0f" />
+
+  <style>
+    :root{
+      --bg:#0b0b0f;
+      --card:#12121a;
+      --ink:#f5f2f0;
+      --muted:rgba(245,242,240,.78);
+      --soft:rgba(245,242,240,.12);
+      --soft2:rgba(245,242,240,.08);
+      --accent:#ff5aa5;
+      --accent2:#b58cff;
+      --ring: rgba(255,90,165,.35);
+      --radius: 18px;
+      --shadow: 0 18px 60px rgba(0,0,0,.55);
+      --max: 1040px;
+    }
+
+    *{ box-sizing:border-box; }
+    html,body{ margin:0; padding:0; background:radial-gradient(1200px 600px at 70% -10%, rgba(255,90,165,.18), transparent 55%),
+                                 radial-gradient(900px 500px at 20% 5%, rgba(181,140,255,.14), transparent 55%),
+                                 var(--bg);
+               color:var(--ink);
+               font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+               line-height:1.5;
+    }
+    a{ color:inherit; text-decoration:none; }
+    a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible{
+      outline: 3px solid var(--ring);
+      outline-offset: 3px;
+      border-radius: 12px;
+    }
+
+    .wrap{ max-width:var(--max); margin:0 auto; padding: 26px 18px 70px; }
+    .topbar{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:12px; padding: 10px 10px 18px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      min-width: 0;
+    }
+    .brand img{ width:38px; height:38px; object-fit:contain; filter: drop-shadow(0 10px 22px rgba(0,0,0,.35)); }
+    .brand .name{ display:flex; flex-direction:column; }
+    .brand .name strong{ font-size:14px; letter-spacing:.2px; }
+    .brand .name span{ font-size:12px; color:var(--muted); }
+
+    .nav{
+      display:flex; gap:10px; align-items:center; flex-wrap:wrap; justify-content:flex-end;
+    }
+    .pill{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:10px 12px; border:1px solid var(--soft);
+      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      border-radius: 999px;
+      font-size:13px;
+      color: var(--muted);
+      transition: transform .12s ease, border-color .12s ease, background .12s ease;
+    }
+    .pill:hover{ transform: translateY(-1px); border-color: rgba(255,255,255,.22); color: var(--ink); }
+
+    .hero{
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 22px;
+      align-items: stretch;
+      margin-top: 6px;
+    }
+    @media (max-width: 900px){
+      .hero{ grid-template-columns: 1fr; }
+    }
+
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+      border: 1px solid var(--soft);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .pad{ padding: 22px; }
+
+    .kicker{
+      display:inline-flex; gap:10px; align-items:center;
+      font-size:12px; letter-spacing:.35px; text-transform:uppercase;
+      color: var(--muted);
+    }
+    .dot{
+      width:8px; height:8px; border-radius:999px;
+      background: radial-gradient(circle at 30% 30%, #fff, var(--accent));
+      box-shadow: 0 0 0 6px rgba(255,90,165,.12);
+    }
+    h1{
+      margin: 10px 0 12px;
+      font-size: clamp(26px, 3.4vw, 42px);
+      line-height: 1.12;
+      letter-spacing: .2px;
+    }
+    .lead{
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 15.5px;
+    }
+    .quote{
+      margin: 16px 0 0;
+      padding: 14px 14px;
+      border: 1px solid var(--soft2);
+      background: rgba(0,0,0,.15);
+      border-radius: 14px;
+      color: rgba(245,242,240,.86);
+      font-size: 14px;
+    }
+    .quote strong{ color: var(--ink); }
+
+    .ctaRow{
+      display:flex; flex-wrap:wrap; gap:10px; margin-top: 16px;
+    }
+    .btn{
+      display:inline-flex; gap:10px; align-items:center; justify-content:center;
+      padding: 12px 14px;
+      border-radius: 14px;
+      border: 1px solid var(--soft);
+      background: rgba(255,255,255,.06);
+      font-weight: 600;
+      font-size: 14px;
+      transition: transform .12s ease, border-color .12s ease, background .12s ease;
+    }
+    .btn:hover{ transform: translateY(-1px); border-color: rgba(255,255,255,.22); }
+    .btn.primary{
+      border: 1px solid rgba(255,90,165,.45);
+      background: linear-gradient(180deg, rgba(255,90,165,.22), rgba(255,90,165,.10));
+      box-shadow: 0 10px 30px rgba(255,90,165,.12);
+    }
+    .btn.secondary{
+      border: 1px solid rgba(181,140,255,.42);
+      background: linear-gradient(180deg, rgba(181,140,255,.20), rgba(181,140,255,.08));
+      box-shadow: 0 10px 30px rgba(181,140,255,.10);
+    }
+
+    .side{
+      display:flex;
+      flex-direction:column;
+      min-height: 100%;
+    }
+    .portrait{
+      width:100%;
+      aspect-ratio: 4/4;
+      background: #0c0c12;
+      border-bottom: 1px solid var(--soft);
+      position:relative;
+      overflow:hidden;
+    }
+    .portrait img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      filter: contrast(1.02) saturate(1.03);
+    }
+    .badge{
+      position:absolute;
+      left: 14px;
+      bottom: 14px;
+      padding: 10px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--soft);
+      background: rgba(0,0,0,.35);
+      backdrop-filter: blur(10px);
+      font-size: 12.5px;
+      color: rgba(245,242,240,.86);
+    }
+
+    .section{ margin-top: 20px; }
+    .section h2{
+      margin: 0 0 10px;
+      font-size: 18px;
+      letter-spacing:.2px;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    @media (max-width: 900px){
+      .grid{ grid-template-columns: 1fr; }
+    }
+    .mini{
+      padding: 16px;
+      border-radius: 16px;
+      border: 1px solid var(--soft);
+      background: rgba(255,255,255,.03);
+    }
+    .mini strong{ display:block; margin-bottom: 6px; }
+    .mini p{ margin:0; color: var(--muted); font-size: 14px; }
+
+    .list{
+      margin: 10px 0 0;
+      padding: 0;
+      list-style:none;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+    .svc{
+      display:flex; align-items:flex-start; justify-content:space-between;
+      gap: 12px;
+      padding: 12px 12px;
+      border: 1px solid var(--soft2);
+      background: rgba(0,0,0,.12);
+      border-radius: 14px;
+    }
+    .svc .left{ min-width:0; }
+    .svc .title{ font-weight: 650; }
+    .svc .sub{ font-size: 13px; color: var(--muted); margin-top: 2px; }
+    .price{
+      white-space:nowrap;
+      font-weight: 700;
+      color: var(--ink);
+      padding-left: 8px;
+    }
+
+    .contactBox{
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 14px;
+      align-items: start;
+    }
+    @media (max-width: 900px){
+      .contactBox{ grid-template-columns: 1fr; }
+    }
+    label{ display:block; font-size: 12.5px; color: var(--muted); margin: 0 0 6px; }
+    input, textarea{
+      width:100%;
+      padding: 12px 12px;
+      border-radius: 14px;
+      border: 1px solid var(--soft);
+      background: rgba(255,255,255,.04);
+      color: var(--ink);
+      font-size: 14px;
+    }
+    textarea{ min-height: 120px; resize: vertical; }
+
+    .fine{
+      margin-top: 10px;
+      color: rgba(245,242,240,.70);
+      font-size: 12.5px;
+    }
+
+    footer{
+      margin-top: 26px;
+      padding: 18px 8px 0;
+      color: rgba(245,242,240,.62);
+      font-size: 12.5px;
+      display:flex;
+      flex-wrap:wrap;
+      gap: 10px;
+      justify-content:space-between;
+      border-top: 1px solid var(--soft);
+    }
+    .footerLinks{ display:flex; gap: 12px; flex-wrap:wrap; }
+    .footerLinks a{ color: rgba(245,242,240,.72); }
+    .footerLinks a:hover{ color: var(--ink); }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header class="topbar">
+      <div class="brand">
+        <img src="assets/logo.png" alt="Divine Readings by D logo" />
+        <div class="name">
+          <strong>Divine Readings by D</strong>
+          <span>Intuitive Guidance • Growth • Clarity</span>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="Primary">
+        <a class="pill" href="#sessions">Sessions</a>
+        <a class="pill" href="#aie">AIE</a>
+        <a class="pill" href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero">
+        <div class="card">
+          <div class="pad">
+            <div class="kicker"><span class="dot" aria-hidden="true"></span>Private sessions + a guided path forward</div>
+            <h1>Intuitive sessions that bring you back to clarity — and into your next chapter.</h1>
+            <p class="lead">
+              I’m still offering readings and healing sessions — and I’m also inviting women into a deeper evolution through
+              <strong>Awaken → Illuminate → Embody</strong>.
+            </p>
+
+            <div class="quote">
+              If you’ve been feeling overwhelmed, uncertain, emotionally heavy, or standing at a turning point, you’re not broken — you’re becoming aware.
+              <strong>Awareness is where real change begins!</strong>
+              It’s revealed through presence, reflection, and intuitive guidance that <strong>HONORS your autonomy.</strong>
+            </div>
+
+            <div class="ctaRow">
+              <a class="btn primary" href="#contact">Contact Deanna to book</a>
+              <a class="btn secondary" href="https://www.awakenilluminateembody.com" target="_blank" rel="noopener">Explore Awaken • Illuminate • Embody</a>
+              <a class="btn" href="https://www.facebook.com/DivineReadingsByD/" target="_blank" rel="noopener">Follow the main Facebook page</a>
+            </div>
+
+            <p class="fine">
+              Booking is simple: message me with what you’d like to book + a couple time options, and I’ll reply with confirmation and PayPal invoicing.
+            </p>
+          </div>
+        </div>
+
+        <div class="card side">
+          <div class="portrait">
+            <img src="assets/deanna.jpg" alt="Deanna portrait" />
+            <div class="badge">You’re in the right place if you’re ready for truth + next steps.</div>
+          </div>
+
+          <div class="pad">
+            <h2 style="margin:0 0 10px;">What I help with</h2>
+            <div class="grid">
+              <div class="mini">
+                <strong>Clarity & decisions</strong>
+                <p>Cut through the noise and reconnect to what you already know deep down.</p>
+              </div>
+              <div class="mini">
+                <strong>Emotional heaviness</strong>
+                <p>Gentle support when life feels intense, uncertain, or spiritually loud.</p>
+              </div>
+              <div class="mini">
+                <strong>Spiritual growth</strong>
+                <p>Grounded guidance that supports your autonomy and personal power.</p>
+              </div>
+              <div class="mini">
+                <strong>Life transitions</strong>
+                <p>Turning points, relationships, purpose, and “what’s next?” moments.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SESSIONS -->
+      <section id="sessions" class="section">
+        <div class="card">
+          <div class="pad">
+            <h2>Sessions & Pricing</h2>
+            <p class="lead" style="margin-bottom:10px;">
+              Choose what you’re drawn to — if you’re unsure, just tell me what you’re navigating and I’ll recommend the best fit.
+            </p>
+
+            <ul class="list" aria-label="Session list">
+              <li class="svc">
+                <div class="left">
+                  <div class="title">Psychic Tarot</div>
+                  <div class="sub">30 min or 60 min • clarity, direction, and next steps</div>
+                </div>
+                <div class="price">$100 / $150</div>
+              </li>
+
+              <li class="svc">
+                <div class="left">
+                  <div class="title">Mediumship</div>
+                  <div class="sub">1.5 hours • includes up to 4 family members attending</div>
+                </div>
+                <div class="price">$350</div>
+              </li>
+
+              <li class="svc">
+                <div class="left">
+                  <div class="title">Akashic Records</div>
+                  <div class="sub">30 min • soul-level insight and guidance</div>
+                </div>
+                <div class="price">$88</div>
+              </li>
+
+              <li class="svc">
+                <div class="left">
+                  <div class="title">Intuitive Healing / Reiki</div>
+                  <div class="sub">30 min or 60 min • energetic reset and support</div>
+                </div>
+                <div class="price">$88 / $120</div>
+              </li>
+            </ul>
+
+            <p class="fine">
+              Payment: PayPal invoicing (I create it for you after we confirm your session time). If you prefer, you can also explore the AIE pathway for deeper guided support.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- AIE -->
+      <section id="aie" class="section">
+        <div class="card">
+          <div class="pad">
+            <h2>Awaken → Illuminate → Embody (AIE)</h2>
+            <div class="grid">
+              <div class="mini">
+                <strong>Awaken</strong>
+                <p>Recognize what’s real. See the patterns. Return to your inner knowing.</p>
+              </div>
+              <div class="mini">
+                <strong>Illuminate</strong>
+                <p>Bring truth into the light with reflection, guidance, and grounded action.</p>
+              </div>
+              <div class="mini">
+                <strong>Embody</strong>
+                <p>Live it. Hold your boundaries. Become the version of you who doesn’t go back.</p>
+              </div>
+              <div class="mini">
+                <strong>How it connects</strong>
+                <p>Sessions can be a powerful starting point — AIE is the path that supports lasting change.</p>
+              </div>
+            </div>
+
+            <div class="ctaRow" style="margin-top:14px;">
+              <a class="btn secondary" href="https://www.awakenilluminateembody.com" target="_blank" rel="noopener">
+                Visit AwakenIlluminateEmbody.com
+              </a>
+              <a class="btn" href="https://www.facebook.com/DivineReadingsByD/" target="_blank" rel="noopener">
+                Follow Divine Readings by D
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section">
+        <div class="card">
+          <div class="pad">
+            <h2>Contact Deanna to book</h2>
+            <p class="lead" style="margin-bottom:14px;">
+              Send me your session type + 2–3 time options, and I’ll reply with confirmation and PayPal invoicing.
+            </p>
+
+            <div class="contactBox">
+              <div>
+                <form id="contactForm">
+                  <label for="name">Your name</label>
+                  <input id="name" name="name" autocomplete="name" placeholder="Your name" />
+
+                  <div style="height:10px;"></div>
+
+                  <label for="session">Session you want</label>
+                  <input id="session" name="session" placeholder="e.g., Psychic Tarot (60 min), Mediumship, Akashic Records..." />
+
+                  <div style="height:10px;"></div>
+
+                  <label for="times">Best days/times</label>
+                  <input id="times" name="times" placeholder="e.g., Tues after 6pm, Wed 10–2, Fri evening..." />
+
+                  <div style="height:10px;"></div>
+
+                  <label for="message">Anything you want me to know</label>
+                  <textarea id="message" name="message" placeholder="Share the situation or what you want clarity on..."></textarea>
+
+                  <div class="ctaRow">
+                    <button class="btn primary" type="submit">Send booking request</button>
+                    <a class="btn" href="https://www.facebook.com/DivineReadingsByD/" target="_blank" rel="noopener">Message on Facebook</a>
+                  </div>
+
+                  <p class="fine">
+                    This form opens your email app with the message pre-filled (so you stay in control and nothing is “submitted” to a system).
+                  </p>
+                </form>
+              </div>
+
+              <div class="mini">
+                <strong>Quick links</strong>
+                <p style="margin:0 0 10px; color:var(--muted);">
+                  If you’re ready to go deeper than a single session, AIE is where the true transformation unfolds.
+                </p>
+
+                <div class="ctaRow" style="margin-top:10px;">
+                  <a class="btn secondary" href="https://www.awakenilluminateembody.com" target="_blank" rel="noopener">AIE website</a>
+                  <a class="btn" href="https://www.facebook.com/DivineReadingsByD/" target="_blank" rel="noopener">Facebook page</a>
+                </div>
+
+                <p class="fine" style="margin-top:12px;">
+                  Tip: once you connect your domain, this page becomes your “front door” — simple, clean, and focused on bookings.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div>© <span id="year"></span> Divine Readings by D • deannabutcher.com</div>
+      <div class="footerLinks">
+        <a href="#sessions">Sessions</a>
+        <a href="https://www.awakenilluminateembody.com" target="_blank" rel="noopener">AIE</a>
+        <a href="https://www.facebook.com/DivineReadingsByD/" target="_blank" rel="noopener">Facebook</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Update year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Form -> mailto (no booking calendar, no backend)
+    const form = document.getElementById("contactForm");
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      // IMPORTANT: replace this with your booking email address
+      const toEmail = "YOUR_EMAIL_HERE@example.com";
+
+      const name = document.getElementById("name").value.trim();
+      const session = document.getElementById("session").value.trim();
+      const times = document.getElementById("times").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      const subject = encodeURIComponent("Booking Request — Divine Readings by D");
+      const body = encodeURIComponent(
+        `Name: ${name || "-"}\n` +
+        `Session: ${session || "-"}\n` +
+        `Best times: ${times || "-"}\n\n` +
+        `Message:\n${message || "-"}\n\n` +
+        `Sent from deannabutcher.com`
+      );
+
+      window.location.href = `mailto:${toEmail}?subject=${subject}&body=${body}`;
+    });
+  </script>
+</body>
+</html>
