@@ -5,287 +5,131 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Divine Readings by D | Deanna Whitelock (Butcher)</title>
   <meta name="description" content="Private intuitive sessions with Deanna Whitelock (Butcher) — Psychic Tarot, Mediumship, Akashic Records, and Intuitive Healing — plus a deeper pathway through Awaken → Illuminate → Embody." />
-  <meta name="theme-color" content="#fdf6f8" />
+  <meta name="theme-color" content="#0b0606" />
 
-  <!-- Elegant font pairing (gives “Wix” polish) -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500,600&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      --bg:#fdf6f8;            /* blush */
-      --bg2:#fffafb;           /* lighter blush */
-      --cream:#fffdf8;         /* warm cream */
-      --ink:#231b1f;           /* warm charcoal */
-      --muted:rgba(35,27,31,.72);
-
-      --gold:#c7a24a;          /* subtle gold */
-      --goldSoft:rgba(199,162,74,.22);
-      --pink:#e9b7c6;
-      --pinkSoft:rgba(233,183,198,.26);
-
-      --line:rgba(35,27,31,.10);
-      --lineGold:rgba(199,162,74,.25);
-
-      --shadow: 0 18px 60px rgba(35,27,31,.08);
-      --radius: 26px;
-
-      --max: 1140px;
+      --bg-dark:#0b0606;          /* near black */
+      --bg-deep:#12080b;         /* deep warm */
+      --pink:#eec7d2;            /* soft pink */
+      --pink-strong:#e79fb3;     /* stronger pink */
+      --gold:#c9a34a;            /* gold */
+      --gold-soft:rgba(201,163,74,.14);
+      --ink:#0b0606;             /* black for text */
+      --muted:rgba(11,6,6,.72);
+      --cream:#fff8f5;
+      --line:rgba(255,255,255,.06);
+      --radius: 20px;
+      --max: 1100px;
+      --glow: 0 18px 60px rgba(231,156,184,.08);
     }
 
+    /* Reset */
     *{ box-sizing:border-box; }
-    html,body{ margin:0; padding:0; color:var(--ink); font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; line-height:1.6; }
-
-    body{
-      background:
-        radial-gradient(1000px 600px at 15% 10%, var(--pinkSoft), transparent 60%),
-        radial-gradient(900px 540px at 85% 0%, rgba(199,162,74,.16), transparent 55%),
-        radial-gradient(800px 520px at 80% 95%, rgba(233,183,198,.18), transparent 60%),
-        linear-gradient(180deg, var(--bg), var(--bg2));
-    }
+    html,body{ margin:0; padding:0; color:var(--cream); font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background: radial-gradient(1200px 700px at 10% 10%, rgba(231,156,184,.07), transparent 15%), radial-gradient(900px 500px at 90% 90%, rgba(201,163,74,.05), transparent 20%), linear-gradient(180deg,var(--bg-dark),var(--bg-deep)); -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
 
     a{ color:inherit; text-decoration:none; }
-    a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible{
-      outline: 3px solid rgba(199,162,74,.35);
-      outline-offset: 3px;
-      border-radius: 14px;
-    }
+    a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible{ outline: 3px solid rgba(201,163,74,.25); outline-offset: 4px; border-radius: 12px; }
 
-    .wrap{ max-width:var(--max); margin:0 auto; padding: 22px 18px 70px; }
+    .wrap{ max-width:var(--max); margin:36px auto; padding: 28px 20px 80px; }
 
-    /* Top bar */
-    header{
-      display:flex; align-items:center; justify-content:space-between;
-      gap:14px; padding: 10px 2px 18px;
-    }
-    .brand{
-      display:flex; align-items:center; gap:12px; min-width:0;
-    }
-    .brand img{ width:46px; height:46px; object-fit:contain; }
+    /* Decorative corner gold sigil */
+    .sigil{ position:fixed; left:18px; top:18px; width:64px; height:64px; opacity:.95; pointer-events:none; }
+
+    header{ display:flex; align-items:center; justify-content:space-between; gap:16px; padding: 6px 0 18px; }
+    .brand{ display:flex; align-items:center; gap:14px; min-width:0; }
+    .brand img{ width:64px; height:64px; object-fit:cover; border-radius:18px; box-shadow: 0 12px 40px rgba(0,0,0,.6); border: 2px solid rgba(201,163,74,.22); }
     .brand .stack{ display:flex; flex-direction:column; }
-    .brand strong{ font-size:14px; letter-spacing:.2px; }
-    .brand span{ font-size:12.6px; color:var(--muted); }
+    .brand strong{ font-family: Fraunces, serif; font-weight:600; font-size:16px; color:var(--cream); }
+    .brand span{ font-size:12.6px; color:rgba(255,255,255,.72); }
 
     nav{ display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
-    .navlink{
-      font-size: 13px; padding: 10px 14px; border-radius: 999px;
-      border: 1px solid var(--lineGold);
-      background: rgba(255,255,255,.75);
-      transition: transform .12s ease, box-shadow .12s ease;
-    }
-    .navlink:hover{ transform: translateY(-1px); box-shadow: 0 14px 40px rgba(35,27,31,.08); }
+    .navlink{ font-size:13px; padding:8px 14px; border-radius:999px; background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01)); border: 1px solid rgba(255,255,255,.04); color:rgba(255,255,255,.9); transition:transform .12s ease, box-shadow .12s ease; }
+    .navlink:hover{ transform: translateY(-3px); box-shadow: 0 12px 40px rgba(0,0,0,.6); }
 
-    /* Wix-like section bands */
-    .band{
-      margin-top: 18px;
-      border-radius: var(--radius);
-      overflow:hidden;
-      border: 1px solid var(--lineGold);
-      background: rgba(255,255,255,.72);
-      box-shadow: var(--shadow);
-    }
+    .band{ margin-top:22px; border-radius:var(--radius); overflow:hidden; border: 1px solid rgba(255,255,255,.04); background: linear-gradient(180deg, rgba(18,8,11,.55), rgba(11,6,6,.45)); box-shadow: 0 20px 70px rgba(0,0,0,.6); }
+    .inner{ padding:36px 30px; }
+    @media (max-width:980px){ .inner{ padding:24px 18px; } }
 
-    .inner{ padding: 36px 30px; }
-    @media (max-width: 920px){ .inner{ padding: 28px 18px; } }
+    .heroGrid{ display:grid; grid-template-columns: 1.05fr .95fr; gap:28px; align-items:center; }
+    @media (max-width:980px){ .heroGrid{ grid-template-columns:1fr; } }
 
-    .heroGrid{
-      display:grid;
-      grid-template-columns: 1.05fr .95fr;
-      gap: 28px;
-      align-items:center;
-    }
-    @media (max-width: 980px){ .heroGrid{ grid-template-columns: 1fr; } }
+    .kicker{ display:inline-flex; align-items:center; gap:10px; font-size:12px; letter-spacing:.38px; text-transform:uppercase; color:var(--pink); }
+    .kicker i{ width:12px; height:12px; border-radius:999px; background: radial-gradient(circle at 30% 30%, #fff, var(--gold)); box-shadow: 0 0 0 8px rgba(201,163,74,.08); display:inline-block; }
 
-    .kicker{
-      display:inline-flex; align-items:center; gap:10px;
-      font-size:12px; letter-spacing:.38px; text-transform:uppercase;
-      color: rgba(35,27,31,.64);
-    }
-    .kicker i{
-      width:10px; height:10px; border-radius:999px;
-      background: radial-gradient(circle at 30% 30%, #fff, var(--gold));
-      box-shadow: 0 0 0 8px rgba(199,162,74,.14);
-      display:inline-block;
-    }
+    h1{ font-family: Fraunces, serif; font-weight:700; margin: 12px 0 12px; font-size: clamp(28px, 4.2vw, 56px); line-height:1.02; color:var(--cream); text-shadow: 0 6px 26px rgba(0,0,0,.6); }
+    .lead{ margin:0 0 16px; color:rgba(255,255,255,.78); font-size:16px; max-width:64ch; }
 
-    h1{
-      font-family: Fraunces, serif;
-      font-weight: 600;
-      margin: 12px 0 12px;
-      font-size: clamp(30px, 3.7vw, 52px);
-      line-height: 1.08;
-      letter-spacing: .2px;
-    }
+    .quote{ border: 1px solid rgba(201,163,74,.16); background: linear-gradient(180deg, rgba(255,248,245,.04), rgba(255,243,241,.02)); padding:16px; border-radius:16px; color:rgba(255,255,255,.92); font-size:15px; }
+    .quote strong{ color:var(--cream); }
 
-    h2{
-      font-family: Fraunces, serif;
-      font-weight: 600;
-      margin: 0 0 10px;
-      letter-spacing: .12px;
-      font-size: 22px;
-    }
+    .ctaRow{ display:flex; gap:12px; flex-wrap:wrap; margin-top:18px; }
 
-    .lead{
-      margin: 0 0 16px;
-      color: var(--muted);
-      font-size: 16px;
-      max-width: 64ch;
-    }
+    .btn{ display:inline-flex; align-items:center; justify-content:center; padding:12px 16px; border-radius:12px; font-weight:600; font-size:14px; transition: transform .14s ease, box-shadow .14s ease; cursor:pointer; user-select:none; border: none; }
+    .btn:hover{ transform: translateY(-4px); }
+    .btn.primary{ background: linear-gradient(180deg, var(--gold), rgba(201,163,74,.9)); color: var(--bg-dark); box-shadow: 0 12px 30px rgba(201,163,74,.12); }
+    .btn.secondary{ background: linear-gradient(180deg, rgba(231,156,184,.12), rgba(255,255,255,.02)); color:var(--cream); border: 1px solid rgba(231,156,184,.12); }
+    .btn.ghost{ background: transparent; color:var(--cream); border: 1px solid rgba(255,255,255,.04); }
 
-    .quote{
-      border: 1px solid rgba(199,162,74,.25);
-      background: linear-gradient(180deg, rgba(255,255,255,.78), rgba(253,246,248,.60));
-      padding: 16px 16px;
-      border-radius: 18px;
-      color: rgba(35,27,31,.82);
-      font-size: 14.9px;
-    }
-    .quote strong{ color: rgba(35,27,31,.95); }
+    .portrait{ border-radius:20px; overflow:hidden; background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(0,0,0,.12)); display:flex; align-items:center; justify-content:center; padding:10px; }
+    .portrait img{ width:100%; height:430px; object-fit:cover; display:block; border-radius:14px; border: 6px solid rgba(201,163,74,.14); box-shadow: 0 20px 60px rgba(0,0,0,.6); }
+    @media (max-width:980px){ .portrait img{ height:360px; } }
 
-    .ctaRow{ display:flex; gap:10px; flex-wrap:wrap; margin-top: 18px; }
+    .miniRow{ margin-top:16px; display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+    @media (max-width:920px){ .miniRow{ grid-template-columns:1fr; } }
 
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      padding: 12px 16px;
-      border-radius: 14px;
-      border: 1px solid rgba(35,27,31,.14);
-      font-weight: 650;
-      font-size: 14px;
-      transition: transform .12s ease, box-shadow .12s ease;
-      cursor:pointer;
-      user-select:none;
-    }
-    .btn:hover{ transform: translateY(-1px); box-shadow: 0 16px 50px rgba(35,27,31,.10); }
+    .mini{ padding:16px; border-radius:14px; border:1px solid rgba(255,255,255,.03); background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(0,0,0,.06)); }
+    .mini strong{ display:block; margin-bottom:6px; color:var(--cream); }
+    .mini p{ margin:0; color:rgba(255,255,255,.72); }
 
-    .btn.primary{ background: var(--ink); color:#fff; }
-    .btn.secondary{
-      background: linear-gradient(180deg, rgba(233,183,198,.70), rgba(255,255,255,.70));
-      border-color: rgba(233,183,198,.75);
-    }
-    .btn.ghost{
-      background: rgba(255,255,255,.86);
-      border-color: rgba(199,162,74,.25);
-    }
+    .divider{ height:1px; background: linear-gradient(90deg, transparent, rgba(201,163,74,.18), transparent); margin:22px 0; }
 
-    .note{ margin-top: 12px; color: rgba(35,27,31,.62); font-size: 12.9px; }
+    .svcGrid{ display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:10px; }
+    @media (max-width:920px){ .svcGrid{ grid-template-columns:1fr; } }
+    .svc{ display:flex; justify-content:space-between; align-items:flex-start; gap:12px; padding:16px; border-radius:12px; background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(0,0,0,.06)); border:1px solid rgba(255,255,255,.03); }
+    .svc .title{ font-weight:700; color:var(--cream); }
+    .svc .desc{ margin-top:4px; font-size:13.7px; color:rgba(255,255,255,.72); }
+    .svc .price{ font-weight:800; color:var(--gold); }
 
-    .portrait{
-      border-radius: 22px;
-      overflow:hidden;
-      border: 1px solid var(--line);
-      background:#fff;
-      box-shadow: 0 18px 55px rgba(35,27,31,.10);
-    }
-    .portrait img{ width:100%; height: 430px; object-fit: cover; display:block; }
-    @media (max-width: 980px){ .portrait img{ height: 360px; } }
+    .aieGrid{ display:grid; grid-template-columns:1.1fr .9fr; gap:18px; align-items:start; margin-top:10px; }
+    @media (max-width:980px){ .aieGrid{ grid-template-columns:1fr; } }
 
-    .miniRow{
-      margin-top: 16px;
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-    }
-    @media (max-width: 920px){ .miniRow{ grid-template-columns: 1fr; } }
+    .bullets{ margin:10px 0 0; padding:0 0 0 18px; color:rgba(255,255,255,.8); }
+    .bullets li{ margin:8px 0; }
 
-    .mini{
-      padding: 16px;
-      border-radius: 18px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.80);
-    }
-    .mini strong{ display:block; margin-bottom: 6px; }
-    .mini p{ margin:0; color: var(--muted); font-size: 14px; }
+    .steps{ display:grid; gap:12px; }
+    .step{ border-radius:12px; padding:16px; background: linear-gradient(180deg, rgba(255,248,245,.02), rgba(0,0,0,.04)); border:1px solid rgba(201,163,74,.06); }
+    .step strong{ display:block; margin-bottom:6px; color:var(--cream); }
+    .step .small{ margin:0; color:rgba(255,255,255,.78); font-size:13.8px; }
 
-    .divider{
-      height:1px;
-      background: linear-gradient(90deg, transparent, rgba(199,162,74,.55), transparent);
-      margin: 22px 0;
-    }
+    .contactGrid{ display:grid; grid-template-columns:1.05fr .95fr; gap:16px; align-items:start; }
+    @media (max-width:980px){ .contactGrid{ grid-template-columns:1fr; } }
 
-    /* Services */
-    .svcGrid{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-top: 10px;
-    }
-    @media (max-width: 920px){ .svcGrid{ grid-template-columns: 1fr; } }
+    label{ display:block; font-size:12.6px; color:rgba(255,255,255,.82); margin:0 0 6px; }
+    input, textarea{ width:100%; padding:12px 12px; border-radius:12px; border:1px solid rgba(255,255,255,.04); background: rgba(0,0,0,.12); color:var(--cream); font-size:14px; }
+    textarea{ min-height:120px; resize:vertical; }
 
-    .svc{
-      display:flex; justify-content:space-between; gap:12px; align-items:flex-start;
-      padding: 16px 16px;
-      border-radius: 18px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.85);
-    }
-    .svc .title{ font-weight: 700; }
-    .svc .desc{ margin-top:2px; font-size: 13.7px; color: var(--muted); }
-    .svc .price{ font-weight: 800; white-space:nowrap; }
+    footer{ margin-top:24px; padding-top:18px; border-top: 1px solid rgba(255,255,255,.03); color:rgba(255,255,255,.72); font-size:12.5px; display:flex; flex-wrap:wrap; gap:10px; justify-content:space-between; }
 
-    /* AIE */
-    .aieGrid{
-      display:grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap: 18px;
-      align-items:start;
-      margin-top: 10px;
-    }
-    @media (max-width: 980px){ .aieGrid{ grid-template-columns: 1fr; } }
-
-    .bullets{
-      margin: 10px 0 0;
-      padding: 0 0 0 18px;
-      color: rgba(35,27,31,.78);
-    }
-    .bullets li{ margin: 8px 0; }
-
-    .steps{ display:grid; gap: 12px; }
-    .step{
-      border-radius: 18px;
-      border: 1px solid rgba(199,162,74,.22);
-      background: linear-gradient(180deg, rgba(255,255,255,.82), rgba(253,246,248,.65));
-      padding: 16px;
-    }
-    .step strong{ display:block; margin-bottom: 6px; }
-    .step .small{ margin:0; color: var(--muted); font-size: 13.8px; }
-
-    /* Contact */
-    .contactGrid{
-      display:grid;
-      grid-template-columns: 1.05fr .95fr;
-      gap: 16px;
-      align-items:start;
-    }
-    @media (max-width: 980px){ .contactGrid{ grid-template-columns: 1fr; } }
-
-    label{ display:block; font-size: 12.6px; color: rgba(35,27,31,.70); margin: 0 0 6px; }
-    input, textarea{
-      width:100%;
-      padding: 12px 12px;
-      border-radius: 14px;
-      border: 1px solid rgba(35,27,31,.16);
-      background: rgba(255,255,255,.88);
-      color: var(--ink);
-      font-size: 14px;
-    }
-    textarea{ min-height: 120px; resize: vertical; }
-
-    footer{
-      margin-top: 24px;
-      padding-top: 18px;
-      border-top: 1px solid rgba(199,162,74,.25);
-      color: rgba(35,27,31,.60);
-      font-size: 12.5px;
-      display:flex;
-      flex-wrap:wrap;
-      gap: 10px;
-      justify-content:space-between;
-    }
+    /* small screens */
+    @media (max-width:600px){ .brand img{ width:56px; height:56px; } .wrap{ margin:18px auto; padding:18px 14px 60px; } }
   </style>
 </head>
-
 <body>
+  <!-- decorative gold sigil -->
+  <svg class="sigil" viewBox="0 0 100 100" aria-hidden="true">
+    <defs>
+      <linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="#ffdca8"/><stop offset="1" stop-color="#c9a34a"/></linearGradient>
+    </defs>
+    <circle cx="50" cy="50" r="46" fill="none" stroke="url(#g1)" stroke-width="2" opacity=".9"/>
+    <path d="M50 18 L58 38 L80 40 L62 54 L68 76 L50 62 L32 76 L38 54 L20 40 L42 38 Z" fill="url(#g1)" opacity=".85" />
+  </svg>
+
   <div class="wrap">
     <header>
       <div class="brand">
@@ -326,12 +170,12 @@
 
             <div class="ctaRow">
               <a class="btn primary" href="#contact">Book a session / ask a question</a>
-              <a class="btn secondary" href="https://www.awakenilluminateembody.com" target="_blank" rel="noopener">Explore Awaken • Illuminate • Embody</a>
-              <a class="btn ghost" href="https://www.facebook.com/DivineReadingsByD/" target="_blank" rel="noopener">Follow the main Facebook page</a>
+              <a class="btn secondary" href="https://www.awakenilluminateembody.com" target="_blank" rel="noopener noreferrer">Explore Awaken • Illuminate • Embody</a>
+              <a class="btn ghost" href="https://www.facebook.com/DivineReadingsByD/" target="_blank" rel="noopener noreferrer">Follow the main Facebook page</a>
             </div>
 
-            <div class="note">
-              Booking is simple: Send me a message request and I will book you in manually. An invoice will be sent at when you book with me. Payment is due prior to your session to hold your date and time.
+            <div class="note" style="margin-top:12px; color:rgba(255,255,255,.72);">
+              Booking is simple: Send me a message request and I will book you in manually. An invoice will be sent at when you book with me. Payment is due prior to your session to hold your date.
             </div>
 
             <div class="miniRow">
@@ -357,7 +201,7 @@
     <section id="sessions" class="band">
       <div class="inner">
         <h2>Sessions & Pricing</h2>
-        <p class="lead" style="margin-bottom:6px;">
+        <p class="lead" style="margin-bottom:6px; color:rgba(255,255,255,.78);">
           Not sure what fits? Tell me what you’re navigating, and I’ll recommend the best session type.
         </p>
 
@@ -397,7 +241,7 @@
 
         <div class="divider" aria-hidden="true"></div>
 
-        <div class="note" style="margin:0;">
+        <div class="note" style="margin:0; color:rgba(255,255,255,.72);">
           Payment is via PayPal invoicing after we confirm your time. No booking calendar. No pressure. Just direct communication.
         </div>
       </div>
@@ -407,7 +251,7 @@
     <section id="aie" class="band">
       <div class="inner">
         <h2>Awaken → Illuminate → Embody (AIE)</h2>
-        <p class="lead" style="margin-bottom:0;">
+        <p class="lead" style="margin-bottom:0; color:rgba(255,255,255,.78);">
           I created this program because insight alone isn’t always enough. Many women can “see the truth” and still feel stuck.
           Awaken, Illuminate & Embody is a gentle structure that helps you move from awareness… into real change.
         </p>
@@ -416,15 +260,15 @@
           <div>
             <div class="divider" aria-hidden="true"></div>
 
-            <h2 style="font-size:18px; margin-bottom:8px;">Why I created Awaken, Illuminate & Embody</h2>
-            <p class="lead" style="font-size:15px;">
+            <h2 style="font-size:18px; margin-bottom:8px; color:var(--cream);">Why I created Awaken, Illuminate & Embody</h2>
+            <p class="lead" style="font-size:15px; color:rgba(255,255,255,.78);">
               Over time, I noticed something powerful: women weren’t lacking strength — they were carrying too much.
               Emotional heaviness. Overwhelm. Old patterns. People-pleasing. Survival mode.
               AIE is a guided path to help you return to yourself, rebuild self-trust, and choose your next chapter with clarity —
               without giving your power away.
             </p>
 
-            <h2 style="font-size:18px; margin:18px 0 8px;">How AIE can help you</h2>
+            <h2 style="font-size:18px; margin:18px 0 8px; color:var(--cream);">How AIE can help you</h2>
             <ul class="bullets">
               <li>Turns intuitive insight into grounded action.</li>
               <li>Helps you trust yourself again — and hold your boundaries without guilt.</li>
@@ -434,7 +278,7 @@
             </ul>
 
             <div class="ctaRow" style="margin-top:16px;">
-              <a class="btn secondary" href="https://www.awakenilluminateembody.com" target="_blank" rel="noopener">Visit AIE website</a>
+              <a class="btn secondary" href="https://www.awakenilluminateembody.com" target="_blank" rel="noopener noreferrer">Visit AIE website</a>
               <a class="btn ghost" href="#contact">Ask if AIE is right for you</a>
             </div>
           </div>
@@ -462,8 +306,8 @@
         <div class="divider" aria-hidden="true"></div>
 
         <div class="ctaRow">
-          <a class="btn ghost" href="https://www.facebook.com/DivineReadingsByD/" target="_blank" rel="noopener">Follow Divine Readings by D</a>
-          <a class="btn secondary" href="https://www.awakenilluminateembody.com" target="_blank" rel="noopener">Explore AIE</a>
+          <a class="btn ghost" href="https://www.facebook.com/DivineReadingsByD/" target="_blank" rel="noopener noreferrer">Follow Divine Readings by D</a>
+          <a class="btn secondary" href="https://www.awakenilluminateembody.com" target="_blank" rel="noopener noreferrer">Explore AIE</a>
         </div>
       </div>
     </section>
@@ -472,7 +316,7 @@
     <section id="contact" class="band">
       <div class="inner">
         <h2>Book a session or ask a question</h2>
-        <p class="lead" style="margin-bottom:0;">
+        <p class="lead" style="margin-bottom:0; color:rgba(255,255,255,.78);">
           This form opens your email with a pre-filled message to <strong>divinereadingsbyd@gmail.com</strong>.
           Send the session you want and Deanna will respond with her available dates and times. An invoice will be sent to you and payment will be due prior to your reading to hold your booking.
         </p>
@@ -483,17 +327,17 @@
           <div>
             <form id="contactForm">
               <label for="name">Your name</label>
-              <input id="name" name="name" autocomplete="name" placeholder="Your name" />
+              <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name" />
 
               <div style="height:10px;"></div>
 
               <label for="session">Session you want (or “question”)</label>
-              <input id="session" name="session" placeholder="e.g., Psychic Tarot (60 min), Mediumship, Akashic Records, Question..." />
+              <input id="session" name="session" type="text" placeholder="e.g., Psychic Tarot (60 min), Mediumship, Akashic Records, Question..." />
 
               <div style="height:10px;"></div>
 
               <label for="times">Best days/times</label>
-              <input id="times" name="times" placeholder="e.g., Tues after 6pm, Wed 10–2, Fri evening..." />
+              <input id="times" name="times" type="text" placeholder="e.g., Tues after 6pm, Wed 10–2, Fri evening..." />
 
               <div style="height:10px;"></div>
 
@@ -505,7 +349,7 @@
                 <a class="btn ghost" href="mailto:divinereadingsbyd@gmail.com?subject=Question%20%E2%80%94%20Divine%20Readings%20by%20D">Email directly</a>
               </div>
 
-              <div class="note">
+              <div class="note" style="margin-top:10px; color:rgba(255,255,255,.72);">
                 Nothing is submitted to a system — you stay in control of your message.
               </div>
             </form>
@@ -513,18 +357,18 @@
 
           <div class="mini">
             <strong>Quick links</strong>
-            <p style="margin:0; color:var(--muted);">
+            <p style="margin:0; color:rgba(255,255,255,.72);">
               Want the deeper path? Explore Awaken, Illuminate & Embody. Want clarity first? Book a session. Either way — you’re welcome here.
             </p>
 
             <div class="ctaRow" style="margin-top:14px;">
-              <a class="btn secondary" href="https://www.awakenilluminateembody.com" target="_blank" rel="noopener">AIE website</a>
-              <a class="btn ghost" href="https://www.facebook.com/DivineReadingsByD/" target="_blank" rel="noopener">Facebook</a>
+              <a class="btn secondary" href="https://www.awakenilluminateembody.com" target="_blank" rel="noopener noreferrer">AIE website</a>
+              <a class="btn ghost" href="https://www.facebook.com/DivineReadingsByD/" target="_blank" rel="noopener noreferrer">Facebook</a>
             </div>
 
             <div class="divider" aria-hidden="true"></div>
 
-            <div class="note" style="margin:0;">
+            <div class="note" style="margin:0; color:rgba(255,255,255,.72);">
               Tip: Use <strong>deannabutcher.com</strong> as your single link everywhere you would use Linktree.
             </div>
           </div>
@@ -534,38 +378,46 @@
           <div>© <span id="year"></span> Divine Readings by D • Deanna Whitelock (Butcher)</div>
           <div>
             <a href="#sessions">Sessions</a> ·
-            <a href="https://www.awakenilluminateembody.com" target="_blank" rel="noopener">AIE</a> ·
-            <a href="https://www.facebook.com/DivineReadingsByD/" target="_blank" rel="noopener">Facebook</a>
+            <a href="https://www.awakenilluminateembody.com" target="_blank" rel="noopener noreferrer">AIE</a> ·
+            <a href="https://www.facebook.com/DivineReadingsByD/" target="_blank" rel="noopener noreferrer">Facebook</a>
           </div>
         </footer>
       </div>
     </section>
   </div>
 
+  <noscript>
+    <div style="max-width:var(--max); margin:18px auto; padding:12px; color:var(--cream); background:rgba(0,0,0,.4); border-radius:12px; text-align:center;">JavaScript is disabled — use this link to email: <a href="mailto:divinereadingsbyd@gmail.com" style="color:var(--pink);">divinereadingsbyd@gmail.com</a></div>
+  </noscript>
+
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    (function(){
+      // set year
+      var yearEl = document.getElementById("year"); if(yearEl) yearEl.textContent = new Date().getFullYear();
 
-    const TO_EMAIL = "divinereadingsbyd@gmail.com";
+      var TO_EMAIL = "divinereadingsbyd@gmail.com";
+      var form = document.getElementById("contactForm");
+      if(form){
+        form.addEventListener("submit", function(e){
+          e.preventDefault();
+          var name = (document.getElementById("name")||{}).value || "-";
+          var session = (document.getElementById("session")||{}).value || "-";
+          var times = (document.getElementById("times")||{}).value || "-";
+          var message = (document.getElementById("message")||{}).value || "-";
 
-    document.getElementById("contactForm").addEventListener("submit", (e) => {
-      e.preventDefault();
+          var subject = encodeURIComponent("Booking / Question — Divine Readings by D");
+          var bodyText = "Name: " + name + "\n" +
+                         "Session or Question: " + session + "\n" +
+                         "Best times (if booking): " + times + "\n\n" +
+                         "Message:\n" + message + "\n\n" +
+                         "Sent from deannabutcher.com";
+          var body = encodeURIComponent(bodyText);
 
-      const name = document.getElementById("name").value.trim();
-      const session = document.getElementById("session").value.trim();
-      const times = document.getElementById("times").value.trim();
-      const message = document.getElementById("message").value.trim();
-
-      const subject = encodeURIComponent("Booking / Question — Divine Readings by D");
-      const body = encodeURIComponent(
-        `Name: ${name || "-"}\n` +
-        `Session or Question: ${session || "-"}\n` +
-        `Best times (if booking): ${times || "-"}\n\n` +
-        `Message:\n${message || "-"}\n\n` +
-        `Sent from deannabutcher.com`
-      );
-
-      window.location.href = `mailto:${TO_EMAIL}?subject=${subject}&body=${body}`;
-    });
+          // mailto length can be limited in some clients; this is a best-effort mailto
+          window.location.href = "mailto:" + TO_EMAIL + "?subject=" + subject + "&body=" + body;
+        });
+      }
+    })();
   </script>
 </body>
 </html>
